@@ -10,7 +10,7 @@ angular.module("contactsApp", ['ngRoute'])
                     }
                 }
             })
-            .when("/new/contact", {
+            .when("/new/lugar", {
                 controller: "NewContactController",
                 templateUrl: "contact-form.html"
             })
@@ -24,7 +24,7 @@ angular.module("contactsApp", ['ngRoute'])
     })
     .service("Contacts", function($http) {
         this.getContacts = function() {
-            return $http.get("/contacts").
+            return $http.get("/lugares").
                 then(function(response) {
                     return response;
                 }, function(response) {
